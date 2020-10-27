@@ -1,0 +1,54 @@
+.search-container{
+    margin: 0rem 1.5rem;
+}
+
+.hospital-categories{
+    margin: 0rem 1.5rem;
+}
+
+.title-searchHospital{
+    font-size: 2rem;
+    font-weight: bold; 
+}
+
+.title-hospital-carasoul{
+    font-size: 1.4rem;
+    font-weight: bold
+}
+
+.hospital-carasoul{
+    margin: 2rem 0rem;
+    border: 1px solid grey;
+    height: 13.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left:1.5rem;
+    border:0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.inner-div{
+    width: 45.5rem;
+    display: flex;
+    border:0;
+}
+
+.hospital-carasoul::-webkit-scrollbar {
+    display: none;
+}
+
+.carasoul-items{
+    border:0;
+    width:8rem;
+    display: block;
+    height: 13.5rem;
+    border-radius: 18px;
+    background-color:#d20808;
+    margin-right:1.1rem;
+    overflow:hidden;
+}
+
+.carasoul-img{
+    width: 8rem;
+}
