@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
 import "../StyleSheets/HospitalCategories.css"
 
 const HospitalCategories = () =>{
@@ -57,21 +58,17 @@ const HospitalCategories = () =>{
         <>
         <div className="category-container">
             <div className="container">
-                <form className="search-form">
-                    <input type="text" className="search-inp" placeholder="Eg. Arya Hospital" />
-                    <button type="submit" className="search-btn"><img src="./assets/icons/search.svg" width="20"></img></button>
-                </form>
                 <div className="search-heading">
                     <p>Seacrh By Speciality</p>
                 </div>
                 <div className="card-group">
                     {categories.map((item,index)=>{
                         return(
-                            <div className="card" key={index}>
+                            <Link className="card" key={index} to={{pathname:"/search-output-hospital",state:{"hospiSpeciality":item.value, "name":item.name}}} style={{textDecoration:"none"}}>
                                 <img className="card-img" src={item.img}></img>
                                 <p className="card-name">{item.name} <br />
                                 <span className="card-desc">320 Rs.</span></p>
-                            </div>
+                            </Link>
                         )
                     })}
                 </div>
